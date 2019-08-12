@@ -1,0 +1,1 @@
+cmd_/root/code/gs/kernel/hello_core.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /root/code/gs/kernel/hello_core.ko /root/code/gs/kernel/hello_core.o /root/code/gs/kernel/hello_core.mod.o

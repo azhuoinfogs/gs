@@ -1,0 +1,2687 @@
+cscope 15 $HOME/code/gs/kernel -q 0000000322 0000016362
+	@hello.h
+
+1 
+	~<löux/moduÀ.h
+>
+
+2 
+	~<löux/kthªad.h
+>
+
+3 
+	~<löux/¶ab.h
+>
+
+4 
+	~<löux/kî√l.h
+>
+
+5 
+	~<löux/öô.h
+>
+
+6 
+	~<löux/¥oc_fs.h
+>
+
+7 
+	~<löux/jiffõs.h
+>
+
+8 
+	~<löux/£q_fûe.h
+>
+
+9 
+	~<löux/kobje˘.h
+>
+
+10 
+	~<löux/sysfs.h
+>
+
+11 
+	~<löux/¶ab.h
+>
+
+12 
+	~<löux/devi˚.h
+>
+
+13 
+	~<löux/cdev.h
+>
+
+14 
+	#DEMO_DEV_MAX
+ 255
+
+	)
+
+15 
+	#DEMO_DEVICE_NAME_SIZE
+ 32
+
+	)
+
+16 
+	sdemo_d©a
+
+
+18 
+	mãxt_d©a
+;
+
+22 
+	sdemo_devi˚
+
+
+24 
+devi˚
+ 
+	mdev
+;
+
+25 
+moduÀ
+ *
+	mow√r
+;
+
+26 
+	mid
+;
+
+27 
+	m«me
+[
+DEMO_DEVICE_NAME_SIZE
+];
+
+28 c⁄° 
+demo_˛ass_›s
+ *
+	m›s
+;
+
+29 
+muãx
+ 
+	m›s_lock
+;
+
+30 
+cdev
+ 
+	mch¨_dev
+;
+
+31 
+	mÊags
+;
+
+32 
+	múq_d©a
+;
+
+33 
+•ölock_t
+ 
+	múq_lock
+;
+
+34 
+waô_queue_hód_t
+ 
+	múq_queue
+;
+
+35 
+Ásync_°ru˘
+ *
+	masync_queue
+;
+
+37 
+demo_d©a
+ 
+	mdemo_d©a
+;
+
+40 
+	sdemo_˛ass_›s
+ {
+
+41 (*
+	m›í
+)(
+	mdevi˚
+ *);
+
+42 (*
+	mªÀa£
+)(
+	mdevi˚
+ *);
+
+43 (*
+	mio˘l
+)(
+	mdevi˚
+ *, , );
+
+44 (*
+	m£t_d©a
+)(
+	mdevi˚
+ *, 
+	mdemo_˘l_d©a
+ *);
+
+45 (*
+	mgë_d©a
+)(
+	mdevi˚
+ *, 
+	mdemo_˘l_d©a
+ *);
+
+46 (*
+	m¥oc
+)(
+	mdevi˚
+ *, 
+	m£q_fûe
+ *);
+
+47 (*
+	mªad_ˇŒback
+)(
+	mdevi˚
+ *, 
+	md©a
+);
+
+	@hello_core.c
+
+1 
+	~"hñlo.h
+"
+
+2 
+	~"hñlo_sysfs.h
+"
+
+3 #i‚de‡
+SLEEP_MILLI_SEC
+
+
+4 
+	#SLEEP_MILLI_SEC
+(
+nMûliSec
+) \
+
+6 
+timeout
+ = (
+nMûliSec
+Ë* 
+HZ
+ / 1000; \
+
+7 
+timeout
+ > 0) { \
+
+8 
+timeout
+ = 
+	`scheduÀ_timeout
+(timeout); \
+
+10 } 0);
+
+	)
+
+13 
+	#MODULE_VERS
+ "1.0"
+
+	)
+
+14 
+	#MODULE_NAME
+ "¥ocfs_exam∂e"
+
+	)
+
+15 
+	#FOOBAR_LEN
+ 8
+
+	)
+
+16 
+kobje˘
+ *
+	gkob
+ = 
+NULL
+;
+
+17 
+k£t
+ *
+	gk°
+ = 
+NULL
+;
+
+19 
+èsk_°ru˘
+ *
+	gã°_èsk
+ = 
+NULL
+;
+
+20 
+˛ass
+ *
+	gdemo_˛ass
+;
+
+21 
+dev_t
+ 
+	gdemo_devt
+;
+
+22 
+ssize_t
+ 
+	$hñlo_sys_show
+(
+devi˚
+ *
+d
+, 
+devi˚_©åibuã
+ *
+©å
+,
+
+23 *
+buf
+) {
+
+24  
+	`•rötf
+(
+buf
+, "this is hello sys show\n");
+
+25 
+	}
+}
+
+26 
+ssize_t
+ 
+	$hñlo_sys_°‹e
+(
+devi˚
+ *
+d
+, 
+devi˚_©åibuã
+ *
+©å
+,
+
+27 c⁄° *
+buf
+, 
+size_t
+ 
+cou¡
+) {
+
+28 i‡(*
+buf
+ == '0') {
+
+29 
+	`¥ötk
+("hello sys storeÜow\n");
+
+31 
+	`¥ötk
+("hello sys store high\n");
+
+33  
+cou¡
+;
+
+34 
+	}
+}
+
+35 
+	$hñlo_¥oc_show
+(
+£q_fûe
+ *
+m
+, *
+v
+) {
+
+36 
+	`£q_¥ötf
+(
+m
+, "HelloÖroc!\n");
+
+38 
+	}
+}
+
+40 
+kobj_©åibuã
+ 
+	gdev_©å_demo_«me
+ = 
+__ATTR
+(
+
+41 
+dev_©å_demo_«me
+, 
+S_IWUSR
+ | 
+S_IRUGO
+, 
+hñlo_sys_show
+, 
+hñlo_sys_°‹e
+);
+
+42 
+kobj_©åibuã
+ 
+	gdev_©å_demo_d©a
+ = 
+__ATTR
+(
+
+43 
+dev_©å_demo_d©a
+, 
+S_IWUSR
+ | 
+S_IRUGO
+, 
+hñlo_sys_show
+, 
+hñlo_sys_°‹e
+);
+
+45 
+	$hñlo_¥oc_›í
+(
+öode
+ *öode, 
+fûe
+ *file) {
+
+46  
+	`sögÀ_›í
+(
+fûe
+, 
+hñlo_¥oc_show
+, 
+NULL
+);
+
+47 
+	}
+}
+
+49 c⁄° 
+fûe_›î©i⁄s
+ 
+	ghñlo_¥oc_f›s
+ = { .
+ow√r
+ = 
+THIS_MODULE
+,
+
+50 .
+	g›í
+ = 
+hñlo_¥oc_›í
+,
+
+51 .
+	gªad
+ = 
+£q_ªad
+,
+
+52 .
+	gŒ£ek
+ = 
+£q_l£ek
+,
+
+53 .
+	gªÀa£
+ =
+
+54 
+sögÀ_ªÀa£
+, };
+
+56 
+©åibuã
+ *
+	gdemo_©ås
+[] = { &
+dev_©å_demo_«me
+.
+©å
+,
+
+57 &
+dev_©å_demo_d©a
+.
+©å
+,
+
+58 
+NULL
+, };
+
+59 c⁄° 
+©åibuã_group
+ 
+	gdemo_groups
+ = { .
+©ås
+ = 
+demo_©ås
+, };
+
+61 
+__öô
+ 
+	$demo_dev_öô
+() {
+
+62 
+îr
+;
+
+63 
+îr
+ = 
+	`Æloc_chrdev_ªgi⁄
+(&
+demo_devt
+, 0, 
+DEMO_DEV_MAX
+, "demo");
+
+64 i‡(
+îr
+ < 0)
+
+65 
+	`¥_îr
+("failedÅoállocate char devÑegion\n");
+
+66 
+	}
+}
+
+68 
+__öô
+ 
+	$demo_¥oc_öô
+() {
+
+69 
+	`¥oc_¸óã
+("demo_¥oc", 0, 
+NULL
+, &
+hñlo_¥oc_f›s
+);
+
+71 
+	}
+}
+
+78 
+__öô
+ 
+	$demo_c‹e_öô
+() {
+
+80 
+demo_˛ass
+ = 
+	`˛ass_¸óã
+(
+THIS_MODULE
+, "demo");
+
+81 i‡(
+	`IS_ERR
+(
+demo_˛ass
+)) {
+
+82 
+	`¥_îr
+("couldn't create class\n");
+
+83  
+	`PTR_ERR
+(
+demo_˛ass
+);
+
+86 
+	`demo_dev_öô
+();
+
+88 
+	`demo_¥oc_öô
+();
+
+90 
+	`sysfs_demo_öô
+(
+demo_˛ass
+);
+
+91 
+	`¥_öfo
+("demo subsys init success\n");
+
+93 
+	}
+}
+
+95 
+__exô
+ 
+	$demo_c‹e_exô
+() {
+
+96 
+	`demo_¥oc_exô
+();
+
+97 
+	`demo_dev_exô
+();
+
+98 
+	`˛ass_de°roy
+(
+demo_˛ass
+);
+
+99 
+	`ida_de°roy
+(&
+demo_ida
+);
+
+100 
+	`¥_öfo
+("demo subsysÉxit success\n");
+
+101 
+	}
+}
+
+103 
+	$MyPrötk
+(*
+d©a
+) {
+
+104 *
+myd©a
+ = 
+	`kmÆloc
+(
+	`°æí
+(
+d©a
+Ë+ 1, 
+GFP_KERNEL
+);
+
+105 
+	`mem£t
+(
+myd©a
+, '\0', 
+	`°æí
+(
+d©a
+) + 1);
+
+106 
+	`°∫˝y
+(
+myd©a
+, 
+d©a
+, 
+	`°æí
+(data));
+
+107 !
+	`kthªad_should_°›
+()) {
+
+108 
+	`SLEEP_MILLI_SEC
+(1000);
+
+109 
+	`¥ötk
+("%s\n", 
+myd©a
+);
+
+111 
+	`k‰ì
+(
+myd©a
+);
+
+113 
+	}
+}
+
+114 
+__öô
+ 
+	$öô_kthªad
+() {
+
+115 
+ã°_èsk
+ = 
+	`kthªad_run
+(
+MyPrötk
+, "hello world", "mythread");
+
+117 
+	}
+}
+
+118 
+__exô
+ 
+	$exô_kthªad
+() {
+
+119 i‡(
+ã°_èsk
+) {
+
+120 
+	`¥ötk
+("stop MyThread\n");
+
+121 
+	`kthªad_°›
+(
+ã°_èsk
+);
+
+123 
+	}
+}
+
+124 
+__exô
+ 
+	$hñlo_¥oc_exô
+() {
+
+125 
+	`ªmove_¥oc_íåy
+("hñlo_¥oc", 
+NULL
+);
+
+126 
+	}
+}
+
+175 
+moduÀ_öô
+(
+demo_c‹e_öô
+);
+
+176 
+moduÀ_exô
+(
+demo_c‹e_exô
+);
+
+178 
+MODULE_LICENSE
+("Dual BSD/GPL");
+
+	@hello_core.mod.c
+
+1 
+	~<löux/moduÀ.h
+>
+
+2 
+	~<löux/vîmagic.h
+>
+
+3 
+	~<löux/compûî.h
+>
+
+5 
+MODULE_INFO
+(
+vîmagic
+, 
+VERMAGIC_STRING
+);
+
+7 
+moduÀ
+ 
+__this_moduÀ
+
+
+8 
+__©åibuã__
+((
+£˘i⁄
+(".gnu.linkonce.this_module"))) = {
+
+9 .
+«me
+ = 
+KBUILD_MODNAME
+,
+
+10 .
+	göô
+ = 
+öô_moduÀ
+,
+
+11 .
+	g¨ch
+ = 
+MODULE_ARCH_INIT
+,
+
+14 c⁄° 
+modvîsi⁄_öfo
+ 
+	g____vîsi⁄s
+[]
+
+15 
+__u£d
+
+
+16 
+__©åibuã__
+((
+£˘i⁄
+("__versions"))) = {
+
+17 { 0x28950ef1, 
+__VMLINUX_SYMBOL_STR
+(
+moduÀ_œyout
+) },
+
+18 { 0x2296f507, 
+__VMLINUX_SYMBOL_STR
+(
+sögÀ_ªÀa£
+) },
+
+19 { 0x9c3df9b4, 
+__VMLINUX_SYMBOL_STR
+(
+£q_ªad
+) },
+
+20 { 0x1685c91c, 
+__VMLINUX_SYMBOL_STR
+(
+£q_l£ek
+) },
+
+21 { 0x8c34c149, 
+__VMLINUX_SYMBOL_STR
+(
+¥oc_¸óã_d©a
+) },
+
+22 { 0x7e5df8e3, 
+__VMLINUX_SYMBOL_STR
+(
+__˛ass_¸óã
+) },
+
+23 { 0x27e1a049, 
+__VMLINUX_SYMBOL_STR
+(
+¥ötk
+) },
+
+24 { 0x29537c9e, 
+__VMLINUX_SYMBOL_STR
+(
+Æloc_chrdev_ªgi⁄
+) },
+
+25 { 0x74df1d4, 
+__VMLINUX_SYMBOL_STR
+(
+£q_¥ötf
+) },
+
+26 { 0x16a5a12f, 
+__VMLINUX_SYMBOL_STR
+(
+sögÀ_›í
+) },
+
+27 { 0xbdfb6dbb, 
+__VMLINUX_SYMBOL_STR
+(
+__„¡ry__
+) },
+
+30 c⁄° 
+	g__moduÀ_dïíds
+[]
+
+31 
+__u£d
+
+
+32 
+__©åibuã__
+((
+£˘i⁄
+(".modinfo"))) =
+
+36 
+MODULE_INFO
+(
+§cvîsi⁄
+, "97D38FB058EC2B4E116AF42");
+
+37 
+MODULE_INFO
+(
+rhñvîsi⁄
+, "7.3");
+
+	@hello_sysfs.c
+
+1 
+	~"hñlo_sysfs.h
+"
+
+3 
+ssize_t
+ 
+	$sysfs_demo_show_node_⁄e
+(
+kobje˘
+ *
+kobj
+,
+
+4 
+kobj_©åibuã
+ *
+©å
+,
+
+5 *
+buf
+) {
+
+6 
+	`¥_öfo
+("íãr,Çode: %s\n", 
+©å
+->©å.
+«me
+);
+
+7  
+	`•rötf
+(
+buf
+, "%s: %s\n", 
+©å
+->©å.
+«me
+, 
+node_⁄e_buf
+);
+
+8 
+	}
+}
+
+9 
+ssize_t
+ 
+	$sysfs_demo_°‹e_node_⁄e
+(
+kobje˘
+ *
+kobj
+,
+
+10 
+kobj_©åibuã
+ *
+©å
+,
+
+11 c⁄° *
+buf
+, 
+size_t
+ 
+n
+) {
+
+12 
+	`¥_öfo
+("íãr,Çode: %s\n", 
+©å
+->©å.
+«me
+);
+
+14 
+	`•rötf
+(
+node_⁄e_buf
+, "%s", 
+buf
+);
+
+16  
+n
+;
+
+17 
+	}
+}
+
+18 
+kobj_©åibuã
+ 
+	gnode_⁄e_©åibuã
+ =
+
+19 
+__ATTR
+(
+node_⁄e
+, 
+S_IWUSR
+ | 
+S_IRUGO
+, 
+sysfs_demo_show_node_⁄e
+,
+
+20 
+sysfs_demo_°‹e_node_⁄e
+);
+
+22 
+ssize_t
+ 
+	$sysfs_demo_show_node_two
+(
+kobje˘
+ *
+kobj
+,
+
+23 
+kobj_©åibuã
+ *
+©å
+,
+
+24 *
+buf
+) {
+
+26  
+	`•rötf
+(
+buf
+, "%s\n", 
+©å
+->©å.
+«me
+);
+
+27 
+	}
+}
+
+29 
+kobj_©åibuã
+ 
+	gnode_two_©åibuã
+ =
+
+30 
+__ATTR
+(
+node_two
+, 
+S_IWUSR
+ | 
+S_IRUGO
+, 
+sysfs_demo_show_node_two
+, 
+NULL
+);
+
+32 
+©åibuã
+ *
+	gsysfs_demo_©åibuãs
+[] = { &
+node_⁄e_©åibuã
+.
+©å
+,
+
+33 &
+node_two_©åibuã
+.
+©å
+,
+
+34 
+NULL
+ };
+
+35 c⁄° 
+©åibuã_group
+ 
+	gsysfs_demo_©å_group
+ = {
+
+36 .
+©ås
+ = 
+sysfs_demo_©åibuãs
+,
+
+40 
+ssize_t
+ 
+	$sysfs_demo_show_node_thªe
+(
+kobje˘
+ *
+kobj
+,
+
+41 
+kobj_©åibuã
+ *
+©å
+,
+
+42 *
+buf
+) {
+
+43 
+	`¥_öfo
+("íãr,Çode: %s\n", 
+©å
+->©å.
+«me
+);
+
+44  
+	`•rötf
+(
+buf
+, "%s: %s\n", 
+©å
+->©å.
+«me
+, 
+node_thªe_buf
+);
+
+45 
+	}
+}
+
+47 
+ssize_t
+ 
+	$sysfs_demo_°‹e_node_thªe
+(
+kobje˘
+ *
+kobj
+,
+
+48 
+kobj_©åibuã
+ *
+©å
+,
+
+49 c⁄° *
+buf
+, 
+size_t
+ 
+n
+) {
+
+50 
+	`¥_öfo
+("íãr,Çode: %s\n", 
+©å
+->©å.
+«me
+);
+
+52 
+	`•rötf
+(
+node_thªe_buf
+, "%s", 
+buf
+);
+
+54  
+n
+;
+
+55 
+	}
+}
+
+57 
+kobj_©åibuã
+ 
+	gnode_thªe_©åibuã
+ =
+
+58 
+__ATTR
+(
+node_thªe
+, 
+S_IWUSR
+ | 
+S_IRUGO
+, 
+sysfs_demo_show_node_thªe
+,
+
+59 
+sysfs_demo_°‹e_node_thªe
+);
+
+61 
+ssize_t
+ 
+	$sysfs_demo_show_node_four
+(
+kobje˘
+ *
+kobj
+,
+
+62 
+kobj_©åibuã
+ *
+©å
+,
+
+63 *
+buf
+) {
+
+65  
+	`•rötf
+(
+buf
+, "%s\n", 
+©å
+->©å.
+«me
+);
+
+66 
+	}
+}
+
+68 
+kobj_©åibuã
+ 
+	gnode_four_©åibuã
+ =
+
+69 
+__ATTR
+(
+node_four
+, 
+S_IWUSR
+ | 
+S_IRUGO
+, 
+sysfs_demo_show_node_four
+, 
+NULL
+);
+
+71 
+©åibuã
+ *
+	gsysfs_demo2_©åibuãs
+[] = {
+
+72 &
+node_thªe_©åibuã
+.
+©å
+, &
+node_four_©åibuã
+.©å, 
+NULL
+
+
+74 c⁄° 
+©åibuã_group
+ 
+	gsysfs_demo2_©å_group
+ = {
+
+75 .
+©ås
+ = 
+sysfs_demo2_©åibuãs
+,
+
+78 
+__öô
+ 
+	$sysfs_demo_öô
+(
+˛ass
+ *
+˛a
+) {
+
+79 i‡((
+k_obj
+ = 
+	`kobje˘_¸óã_™d_add
+("sysfs_demo", 
+NULL
+)) == NULL) {
+
+80 
+	`¥_îr
+("sysfs_demo sysÇode createÉrror \n");
+
+81 
+out
+;
+
+84 i‡(
+	`sysfs_¸óã_group
+(
+k_obj
+, &
+sysfs_demo_©å_group
+)) {
+
+85 
+	`¥_îr
+("sysfs_create_group failed\n");
+
+86 
+out2
+;
+
+89 i‡((
+k_obj_2
+ = 
+	`kobje˘_¸óã_™d_add
+("sysfs_demo_2", 
+k_obj
+)Ë=
+NULL
+) {
+
+90 
+	`¥_îr
+("hwinfo sysÇode createÉrror \n");
+
+91 
+out3
+;
+
+94 i‡(
+	`sysfs_¸óã_group
+(
+k_obj_2
+, &
+sysfs_demo2_©å_group
+)) {
+
+95 
+	`¥_îr
+("sysfs_create_group failed\n");
+
+96 
+out4
+;
+
+99 
+	`¥_öfo
+("enter.\n");
+
+101 
+out4
+:
+
+102 
+	`kobje˘_put
+(
+k_obj_2
+);
+
+103 
+out3
+:
+
+104 
+	`sysfs_ªmove_group
+(
+k_obj
+, &
+sysfs_demo_©å_group
+);
+
+105 
+out2
+:
+
+106 
+	`kobje˘_put
+(
+k_obj
+);
+
+107 
+out
+:
+
+109 
+	}
+}
+
+111 
+__exô
+ 
+	$sysfs_demo_exô
+() {
+
+112 
+	`¥_öfo
+("enter.\n");
+
+114 i‡(
+k_obj
+) {
+
+115 
+	`sysfs_ªmove_group
+(
+k_obj
+, &
+sysfs_demo_©å_group
+);
+
+116 i‡(
+k_obj_2
+) {
+
+117 
+	`sysfs_ªmove_group
+(
+k_obj_2
+, &
+sysfs_demo2_©å_group
+);
+
+118 
+	`kobje˘_put
+(
+k_obj_2
+);
+
+120 
+	`kobje˘_put
+(
+k_obj
+);
+
+122 
+	}
+}
+
+	@hello_sysfs.h
+
+1 
+	~<löux/öô.h
+>
+
+2 
+	~<löux/moduÀ.h
+>
+
+3 
+	~<löux/kobje˘.h
+>
+
+4 
+	~<löux/devi˚.h
+>
+
+5 
+kobje˘
+ *
+	gk_obj
+ = 
+NULL
+;
+
+6 
+kobje˘
+ *
+	gk_obj_2
+ = 
+NULL
+;
+
+7 
+	gnode_⁄e_buf
+[20] = { 0 };
+
+8 
+	gnode_thªe_buf
+[20] = { 0 };
+
+9 
+˛ass
+ *
+	gdemo_˛ass
+;
+
+10 
+__öô
+ 
+sysfs_demo_öô
+(
+˛ass
+ *
+˛a
+);
+
+11 
+__exô
+ 
+sysfs_demo_exô
+();
+
+	@hello_sysfs.mod.c
+
+1 
+	~<löux/moduÀ.h
+>
+
+2 
+	~<löux/vîmagic.h
+>
+
+3 
+	~<löux/compûî.h
+>
+
+5 
+MODULE_INFO
+(
+vîmagic
+, 
+VERMAGIC_STRING
+);
+
+7 
+moduÀ
+ 
+__this_moduÀ
+
+
+8 
+__©åibuã__
+((
+£˘i⁄
+(".gnu.linkonce.this_module"))) = {
+
+9 .
+«me
+ = 
+KBUILD_MODNAME
+,
+
+10 .
+	g¨ch
+ = 
+MODULE_ARCH_INIT
+,
+
+13 c⁄° 
+modvîsi⁄_öfo
+ 
+	g____vîsi⁄s
+[]
+
+14 
+__u£d
+
+
+15 
+__©åibuã__
+((
+£˘i⁄
+("__versions"))) = {
+
+16 { 0x28950ef1, 
+__VMLINUX_SYMBOL_STR
+(
+moduÀ_œyout
+) },
+
+17 { 0xcbc31bì, 
+__VMLINUX_SYMBOL_STR
+(
+sysfs_ªmove_group
+) },
+
+18 { 0x54554948, 
+__VMLINUX_SYMBOL_STR
+(
+kobje˘_put
+) },
+
+19 { 0x643d15bc, 
+__VMLINUX_SYMBOL_STR
+(
+sysfs_¸óã_group
+) },
+
+20 { 0xc10ˇ2e1, 
+__VMLINUX_SYMBOL_STR
+(
+kobje˘_¸óã_™d_add
+) },
+
+21 { 0xe914e41e, 
+__VMLINUX_SYMBOL_STR
+(
+°r˝y
+) },
+
+22 { 0x91715312, 
+__VMLINUX_SYMBOL_STR
+(
+•rötf
+) },
+
+23 { 0x27e1a049, 
+__VMLINUX_SYMBOL_STR
+(
+¥ötk
+) },
+
+24 { 0xbdfb6dbb, 
+__VMLINUX_SYMBOL_STR
+(
+__„¡ry__
+) },
+
+27 c⁄° 
+	g__moduÀ_dïíds
+[]
+
+28 
+__u£d
+
+
+29 
+__©åibuã__
+((
+£˘i⁄
+(".modinfo"))) =
+
+33 
+MODULE_INFO
+(
+§cvîsi⁄
+, "589100449171124D3033E16");
+
+34 
+MODULE_INFO
+(
+rhñvîsi⁄
+, "7.3");
+
+	@/usr/include/linux/kernel.h
+
+1 #i‚de‡
+_LINUX_KERNEL_H
+
+
+2 
+	#_LINUX_KERNEL_H
+
+
+	)
+
+4 
+	~<löux/sysöfo.h
+>
+
+9 
+	#__ALIGN_KERNEL
+(
+x
+, 
+a
+Ë
+	`__ALIGN_KERNEL_MASK
+(x, (
+	`ty≥of
+(x))◊Ë- 1)
+
+	)
+
+10 
+	#__ALIGN_KERNEL_MASK
+(
+x
+, 
+mask
+Ë(((xË+ (mask)Ë& ~(mask))
+
+	)
+
+12 
+	#__KERNEL_DIV_ROUND_UP
+(
+n
+, 
+d
+Ë((“Ë+ (dË- 1Ë/ (d))
+
+	)
+
+	@/usr/include/linux/sysinfo.h
+
+1 #i‚de‡
+_LINUX_SYSINFO_H
+
+
+2 
+	#_LINUX_SYSINFO_H
+
+
+	)
+
+4 
+	~<löux/ty≥s.h
+>
+
+6 
+	#SI_LOAD_SHIFT
+ 16
+
+	)
+
+7 
+	ssysöfo
+ {
+
+8 
+__kî√l_l⁄g_t
+ 
+	mu±ime
+;
+
+9 
+__kî√l_ul⁄g_t
+ 
+	mlﬂds
+[3];
+
+10 
+__kî√l_ul⁄g_t
+ 
+	mtŸÆøm
+;
+
+11 
+__kî√l_ul⁄g_t
+ 
+	m‰ìøm
+;
+
+12 
+__kî√l_ul⁄g_t
+ 
+	msh¨edøm
+;
+
+13 
+__kî√l_ul⁄g_t
+ 
+	mbuf„ºam
+;
+
+14 
+__kî√l_ul⁄g_t
+ 
+	mtŸÆsw≠
+;
+
+15 
+__kî√l_ul⁄g_t
+ 
+	m‰ìsw≠
+;
+
+16 
+__u16
+ 
+	m¥ocs
+;
+
+17 
+__u16
+ 
+	m∑d
+;
+
+18 
+__kî√l_ul⁄g_t
+ 
+	mtŸÆhigh
+;
+
+19 
+__kî√l_ul⁄g_t
+ 
+	m‰ìhigh
+;
+
+20 
+__u32
+ 
+	mmem_unô
+;
+
+21 
+	m_f
+[20-2*(
+__kî√l_ul⁄g_t
+)-(
+__u32
+)];
+
+	@/usr/include/linux/types.h
+
+1 #i‚de‡
+_LINUX_TYPES_H
+
+
+2 
+	#_LINUX_TYPES_H
+
+
+	)
+
+4 
+	~<asm/ty≥s.h
+>
+
+6 #i‚de‡
+__ASSEMBLY__
+
+
+8 
+	~<löux/posix_ty≥s.h
+>
+
+16 #ifde‡
+__CHECKER__
+
+
+17 
+	#__bôwi£__
+ 
+	`__©åibuã__
+((
+bôwi£
+))
+
+	)
+
+19 
+	#__bôwi£__
+
+
+	)
+
+21 #ifde‡
+__CHECK_ENDIAN__
+
+
+22 
+	#__bôwi£
+ 
+__bôwi£__
+
+
+	)
+
+24 
+	#__bôwi£
+
+
+	)
+
+27 
+__u16
+ 
+	t__bôwi£
+ 
+	t__À16
+;
+
+28 
+__u16
+ 
+	t__bôwi£
+ 
+	t__be16
+;
+
+29 
+__u32
+ 
+	t__bôwi£
+ 
+	t__À32
+;
+
+30 
+__u32
+ 
+	t__bôwi£
+ 
+	t__be32
+;
+
+31 
+__u64
+ 
+	t__bôwi£
+ 
+	t__À64
+;
+
+32 
+__u64
+ 
+	t__bôwi£
+ 
+	t__be64
+;
+
+34 
+__u16
+ 
+	t__bôwi£
+ 
+	t__sum16
+;
+
+35 
+__u32
+ 
+	t__bôwi£
+ 
+	t__wsum
+;
+
+46 
+	#__Æig√d_u64
+ 
+__u64
+ 
+	`__©åibuã__
+((
+	`Æig√d
+(8)))
+
+	)
+
+47 
+	#__Æig√d_be64
+ 
+__be64
+ 
+	`__©åibuã__
+((
+	`Æig√d
+(8)))
+
+	)
+
+48 
+	#__Æig√d_À64
+ 
+__À64
+ 
+	`__©åibuã__
+((
+	`Æig√d
+(8)))
+
+	)
+
+	@/usr/include/asm/types.h
+
+1 #i‚de‡
+_ASM_X86_TYPES_H
+
+
+2 
+	#_ASM_X86_TYPES_H
+
+
+	)
+
+4 
+	~<asm-gíîic/ty≥s.h
+>
+
+	@/usr/include/linux/posix_types.h
+
+1 #i‚de‡
+_LINUX_POSIX_TYPES_H
+
+
+2 
+	#_LINUX_POSIX_TYPES_H
+
+
+	)
+
+4 
+	~<löux/°ddef.h
+>
+
+21 #unde‡
+__FD_SETSIZE
+
+
+22 
+	#__FD_SETSIZE
+ 1024
+
+	)
+
+25 
+	mfds_bôs
+[
+__FD_SETSIZE
+ / (8 * ())];
+
+26 } 
+	t__kî√l_fd_£t
+;
+
+29 (*
+	t__kî√l_sigh™dÀr_t
+)();
+
+32 
+	t__kî√l_key_t
+;
+
+33 
+	t__kî√l_mqd_t
+;
+
+35 
+	~<asm/posix_ty≥s.h
+>
+
+	@/usr/include/asm-generic/types.h
+
+1 #i‚de‡
+_ASM_GENERIC_TYPES_H
+
+
+2 
+	#_ASM_GENERIC_TYPES_H
+
+
+	)
+
+7 
+	~<asm-gíîic/öt-Œ64.h
+>
+
+	@/usr/include/asm/posix_types.h
+
+1 #ifde‡
+__i386__
+
+
+2 
+	~<asm/posix_ty≥s_32.h
+>
+
+3 #ñi‡
+deföed
+(
+__ILP32__
+)
+
+4 
+	~<asm/posix_ty≥s_x32.h
+>
+
+6 
+	~<asm/posix_ty≥s_64.h
+>
+
+	@/usr/include/linux/stddef.h
+
+	@/usr/include/asm-generic/int-ll64.h
+
+8 #i‚de‡
+_ASM_GENERIC_INT_LL64_H
+
+
+9 
+	#_ASM_GENERIC_INT_LL64_H
+
+
+	)
+
+11 
+	~<asm/bô•îl⁄g.h
+>
+
+13 #i‚de‡
+__ASSEMBLY__
+
+
+19 
+__sig√d__
+ 
+	t__s8
+;
+
+20 
+	t__u8
+;
+
+22 
+__sig√d__
+ 
+	t__s16
+;
+
+23 
+	t__u16
+;
+
+25 
+__sig√d__
+ 
+	t__s32
+;
+
+26 
+	t__u32
+;
+
+28 #ifde‡
+__GNUC__
+
+
+29 
+__exãnsi⁄__
+ 
+__sig√d__
+ 
+	t__s64
+;
+
+30 
+__exãnsi⁄__
+ 
+	t__u64
+;
+
+32 
+__sig√d__
+ 
+	t__s64
+;
+
+33 
+	t__u64
+;
+
+	@/usr/include/asm/posix_types_32.h
+
+1 #i‚de‡
+_ASM_X86_POSIX_TYPES_32_H
+
+
+2 
+	#_ASM_X86_POSIX_TYPES_32_H
+
+
+	)
+
+10 
+	t__kî√l_mode_t
+;
+
+11 
+	#__kî√l_mode_t
+ 
+__kî√l_mode_t
+
+
+	)
+
+13 
+	t__kî√l_ùc_pid_t
+;
+
+14 
+	#__kî√l_ùc_pid_t
+ 
+__kî√l_ùc_pid_t
+
+
+	)
+
+16 
+	t__kî√l_uid_t
+;
+
+17 
+	t__kî√l_gid_t
+;
+
+18 
+	#__kî√l_uid_t
+ 
+__kî√l_uid_t
+
+
+	)
+
+20 
+	t__kî√l_ﬁd_dev_t
+;
+
+21 
+	#__kî√l_ﬁd_dev_t
+ 
+__kî√l_ﬁd_dev_t
+
+
+	)
+
+23 
+	~<asm-gíîic/posix_ty≥s.h
+>
+
+	@/usr/include/asm/posix_types_64.h
+
+1 #i‚de‡
+_ASM_X86_POSIX_TYPES_64_H
+
+
+2 
+	#_ASM_X86_POSIX_TYPES_64_H
+
+
+	)
+
+10 
+	t__kî√l_ﬁd_uid_t
+;
+
+11 
+	t__kî√l_ﬁd_gid_t
+;
+
+12 
+	#__kî√l_ﬁd_uid_t
+ 
+__kî√l_ﬁd_uid_t
+
+
+	)
+
+14 
+	t__kî√l_ﬁd_dev_t
+;
+
+15 
+	#__kî√l_ﬁd_dev_t
+ 
+__kî√l_ﬁd_dev_t
+
+
+	)
+
+17 
+	~<asm-gíîic/posix_ty≥s.h
+>
+
+	@/usr/include/asm/posix_types_x32.h
+
+1 #i‚de‡
+_ASM_X86_POSIX_TYPES_X32_H
+
+
+2 
+	#_ASM_X86_POSIX_TYPES_X32_H
+
+
+	)
+
+13 
+	t__kî√l_l⁄g_t
+;
+
+14 
+	t__kî√l_ul⁄g_t
+;
+
+15 
+	#__kî√l_l⁄g_t
+ 
+__kî√l_l⁄g_t
+
+
+	)
+
+17 
+	~<asm/posix_ty≥s_64.h
+>
+
+	@/usr/include/asm-generic/posix_types.h
+
+1 #i‚de‡
+__ASM_GENERIC_POSIX_TYPES_H
+
+
+2 
+	#__ASM_GENERIC_POSIX_TYPES_H
+
+
+	)
+
+4 
+	~<asm/bô•îl⁄g.h
+>
+
+13 #i‚de‡
+__kî√l_l⁄g_t
+
+
+14 
+	t__kî√l_l⁄g_t
+;
+
+15 
+	t__kî√l_ul⁄g_t
+;
+
+18 #i‚de‡
+__kî√l_öo_t
+
+
+19 
+__kî√l_ul⁄g_t
+ 
+	t__kî√l_öo_t
+;
+
+22 #i‚de‡
+__kî√l_mode_t
+
+
+23 
+	t__kî√l_mode_t
+;
+
+26 #i‚de‡
+__kî√l_pid_t
+
+
+27 
+	t__kî√l_pid_t
+;
+
+30 #i‚de‡
+__kî√l_ùc_pid_t
+
+
+31 
+	t__kî√l_ùc_pid_t
+;
+
+34 #i‚de‡
+__kî√l_uid_t
+
+
+35 
+	t__kî√l_uid_t
+;
+
+36 
+	t__kî√l_gid_t
+;
+
+39 #i‚de‡
+__kî√l_su£c⁄ds_t
+
+
+40 
+__kî√l_l⁄g_t
+ 
+	t__kî√l_su£c⁄ds_t
+;
+
+43 #i‚de‡
+__kî√l_daddr_t
+
+
+44 
+	t__kî√l_daddr_t
+;
+
+47 #i‚de‡
+__kî√l_uid32_t
+
+
+48 
+	t__kî√l_uid32_t
+;
+
+49 
+	t__kî√l_gid32_t
+;
+
+52 #i‚de‡
+__kî√l_ﬁd_uid_t
+
+
+53 
+__kî√l_uid_t
+ 
+	t__kî√l_ﬁd_uid_t
+;
+
+54 
+__kî√l_gid_t
+ 
+	t__kî√l_ﬁd_gid_t
+;
+
+57 #i‚de‡
+__kî√l_ﬁd_dev_t
+
+
+58 
+	t__kî√l_ﬁd_dev_t
+;
+
+65 #i‚de‡
+__kî√l_size_t
+
+
+66 #i‡
+__BITS_PER_LONG
+ != 64
+
+67 
+	t__kî√l_size_t
+;
+
+68 
+	t__kî√l_ssize_t
+;
+
+69 
+	t__kî√l_±rdiff_t
+;
+
+71 
+__kî√l_ul⁄g_t
+ 
+	t__kî√l_size_t
+;
+
+72 
+__kî√l_l⁄g_t
+ 
+	t__kî√l_ssize_t
+;
+
+73 
+__kî√l_l⁄g_t
+ 
+	t__kî√l_±rdiff_t
+;
+
+77 #i‚de‡
+__kî√l_fsid_t
+
+
+79 
+	mvÆ
+[2];
+
+80 } 
+	t__kî√l_fsid_t
+;
+
+86 
+__kî√l_l⁄g_t
+ 
+	t__kî√l_off_t
+;
+
+87 
+	t__kî√l_loff_t
+;
+
+88 
+__kî√l_l⁄g_t
+ 
+	t__kî√l_time_t
+;
+
+89 
+__kî√l_l⁄g_t
+ 
+	t__kî√l_˛ock_t
+;
+
+90 
+	t__kî√l_timî_t
+;
+
+91 
+	t__kî√l_˛ockid_t
+;
+
+92 * 
+	t__kî√l_ˇddr_t
+;
+
+93 
+	t__kî√l_uid16_t
+;
+
+94 
+	t__kî√l_gid16_t
+;
+
+	@/usr/include/asm/bitsperlong.h
+
+1 #i‚de‡
+__ASM_X86_BITSPERLONG_H
+
+
+2 
+	#__ASM_X86_BITSPERLONG_H
+
+
+	)
+
+4 #ifde‡
+__x86_64__
+
+
+5 
+	#__BITS_PER_LONG
+ 64
+
+	)
+
+7 
+	#__BITS_PER_LONG
+ 32
+
+	)
+
+10 
+	~<asm-gíîic/bô•îl⁄g.h
+>
+
+	@/usr/include/asm-generic/bitsperlong.h
+
+1 #i‚de‡
+__ASM_GENERIC_BITS_PER_LONG
+
+
+2 
+	#__ASM_GENERIC_BITS_PER_LONG
+
+
+	)
+
+11 #i‚de‡
+__BITS_PER_LONG
+
+
+12 
+	#__BITS_PER_LONG
+ 32
+
+	)
+
+	@
+1
+.
+1
+/usr/include
+21
+566
+hello.h
+hello_core.c
+hello_core.mod.c
+hello_sysfs.c
+hello_sysfs.h
+hello_sysfs.mod.c
+/usr/include/linux/kernel.h
+/usr/include/linux/sysinfo.h
+/usr/include/linux/types.h
+/usr/include/asm/types.h
+/usr/include/linux/posix_types.h
+/usr/include/asm-generic/types.h
+/usr/include/asm/posix_types.h
+/usr/include/linux/stddef.h
+/usr/include/asm-generic/int-ll64.h
+/usr/include/asm/posix_types_32.h
+/usr/include/asm/posix_types_64.h
+/usr/include/asm/posix_types_x32.h
+/usr/include/asm-generic/posix_types.h
+/usr/include/asm/bitsperlong.h
+/usr/include/asm-generic/bitsperlong.h

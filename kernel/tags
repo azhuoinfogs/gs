@@ -1,0 +1,89 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+DEMO_DEVICE_NAME_SIZE	hello.h	15;"	d
+DEMO_DEV_MAX	hello.h	14;"	d
+FOOBAR_LEN	hello_core.c	15;"	d	file:
+KERNELDIR	Makefile	/^KERNELDIR = \/lib\/modules\/$(shell uname -r)\/build$/;"	m
+MODULE_NAME	hello_core.c	14;"	d	file:
+MODULE_VERS	hello_core.c	13;"	d	file:
+MyPrintk	hello_core.c	/^static int MyPrintk(void *data) {$/;"	f	file:
+PWD	Makefile	/^PWD = $(shell pwd)$/;"	m
+SLEEP_MILLI_SEC	hello_core.c	4;"	d	file:
+__this_module	hello_core.mod.c	/^struct module __this_module$/;"	v	typeref:struct:module
+__this_module	hello_sysfs.mod.c	/^struct module __this_module$/;"	v	typeref:struct:module
+__used	hello_core.mod.c	/^__used$/;"	v	file:
+__used	hello_core.mod.c	/^__used$/;"	v	typeref:struct:____versions	file:
+__used	hello_sysfs.mod.c	/^__used$/;"	v	file:
+__used	hello_sysfs.mod.c	/^__used$/;"	v	typeref:struct:____versions	file:
+async_queue	hello.h	/^	struct fasync_struct *async_queue;$/;"	m	struct:demo_device	typeref:struct:demo_device::fasync_struct
+char_dev	hello.h	/^	struct cdev char_dev;$/;"	m	struct:demo_device	typeref:struct:demo_device::cdev
+demo_attrs	hello_core.c	/^static struct attribute *demo_attrs[] = { &dev_attr_demo_name.attr,$/;"	v	typeref:struct:attribute	file:
+demo_class	hello_core.c	/^struct class *demo_class;$/;"	v	typeref:struct:class
+demo_class_ops	hello.h	/^struct demo_class_ops {$/;"	s
+demo_core_exit	hello_core.c	/^module_exit(demo_core_exit);$/;"	v
+demo_core_exit	hello_core.c	/^static void __exit demo_core_exit(void) {$/;"	f	file:
+demo_core_init	hello_core.c	/^module_init(demo_core_init);$/;"	v
+demo_core_init	hello_core.c	/^static int __init demo_core_init(void) {$/;"	f	file:
+demo_data	hello.h	/^	struct demo_data demo_data;$/;"	m	struct:demo_device	typeref:struct:demo_device::demo_data
+demo_data	hello.h	/^struct demo_data$/;"	s
+demo_dev_init	hello_core.c	/^void __init demo_dev_init(void) {$/;"	f
+demo_device	hello.h	/^struct demo_device$/;"	s
+demo_devt	hello_core.c	/^dev_t demo_devt;$/;"	v
+demo_groups	hello_core.c	/^static const struct attribute_group demo_groups = { .attrs = demo_attrs, };$/;"	v	typeref:struct:attribute_group	file:
+demo_proc_init	hello_core.c	/^static int __init demo_proc_init(void) {$/;"	f	file:
+dev	hello.h	/^	struct device dev;$/;"	m	struct:demo_device	typeref:struct:demo_device::device
+dev_attr_demo_data	hello_core.c	/^static struct kobj_attribute dev_attr_demo_data = __ATTR($/;"	v	typeref:struct:kobj_attribute	file:
+dev_attr_demo_name	hello_core.c	/^static struct kobj_attribute dev_attr_demo_name = __ATTR($/;"	v	typeref:struct:kobj_attribute	file:
+exit_kthread	hello_core.c	/^static void __exit exit_kthread(void) {$/;"	f	file:
+flags	hello.h	/^	unsigned long flags;$/;"	m	struct:demo_device
+get_data	hello.h	/^	int (*get_data)(struct device *, struct demo_ctl_data *);$/;"	m	struct:demo_class_ops
+hello_proc_exit	hello_core.c	/^static void __exit hello_proc_exit(void) {$/;"	f	file:
+hello_proc_fops	hello_core.c	/^static const struct file_operations hello_proc_fops = { .owner = THIS_MODULE,$/;"	v	typeref:struct:file_operations	file:
+hello_proc_open	hello_core.c	/^static int hello_proc_open(struct inode *inode, struct file *file) {$/;"	f	file:
+hello_proc_show	hello_core.c	/^static int hello_proc_show(struct seq_file *m, void *v) {$/;"	f	file:
+hello_sys_show	hello_core.c	/^static ssize_t hello_sys_show(struct device *d, struct device_attribute *attr,$/;"	f	file:
+hello_sys_store	hello_core.c	/^static ssize_t hello_sys_store(struct device *d, struct device_attribute *attr,$/;"	f	file:
+id	hello.h	/^	int id;$/;"	m	struct:demo_device
+init_kthread	hello_core.c	/^static int __init init_kthread(void) {$/;"	f	file:
+ioctl	hello.h	/^	int (*ioctl)(struct device *, unsigned int, unsigned long);$/;"	m	struct:demo_class_ops
+irq_data	hello.h	/^	unsigned long irq_data;$/;"	m	struct:demo_device
+irq_lock	hello.h	/^	spinlock_t irq_lock;$/;"	m	struct:demo_device
+irq_queue	hello.h	/^	wait_queue_head_t irq_queue;$/;"	m	struct:demo_device
+k_obj	hello_sysfs.h	/^static struct kobject *k_obj = NULL;$/;"	v	typeref:struct:kobject
+k_obj_2	hello_sysfs.h	/^static struct kobject *k_obj_2 = NULL;$/;"	v	typeref:struct:kobject
+kob	hello_core.c	/^static struct kobject *kob = NULL;$/;"	v	typeref:struct:kobject	file:
+kst	hello_core.c	/^static struct kset *kst = NULL;$/;"	v	typeref:struct:kset	file:
+name	hello.h	/^	char name[DEMO_DEVICE_NAME_SIZE];$/;"	m	struct:demo_device
+node_four_attribute	hello_sysfs.c	/^struct kobj_attribute node_four_attribute =$/;"	v	typeref:struct:kobj_attribute
+node_one_attribute	hello_sysfs.c	/^struct kobj_attribute node_one_attribute =$/;"	v	typeref:struct:kobj_attribute
+node_one_buf	hello_sysfs.h	/^static char node_one_buf[20] = { 0 };$/;"	v
+node_three_attribute	hello_sysfs.c	/^struct kobj_attribute node_three_attribute =$/;"	v	typeref:struct:kobj_attribute
+node_three_buf	hello_sysfs.h	/^static char node_three_buf[20] = { 0 };$/;"	v
+node_two_attribute	hello_sysfs.c	/^struct kobj_attribute node_two_attribute =$/;"	v	typeref:struct:kobj_attribute
+obj-m	Makefile	/^obj-m := hello_core.o hello_sysfs.o$/;"	m
+open	hello.h	/^	int (*open)(struct device *);$/;"	m	struct:demo_class_ops
+ops	hello.h	/^	const struct demo_class_ops *ops;$/;"	m	struct:demo_device	typeref:struct:demo_device::demo_class_ops
+ops_lock	hello.h	/^	struct mutex ops_lock;$/;"	m	struct:demo_device	typeref:struct:demo_device::mutex
+owner	hello.h	/^	struct module *owner;$/;"	m	struct:demo_device	typeref:struct:demo_device::module
+proc	hello.h	/^	int (*proc)(struct device *, struct seq_file *);$/;"	m	struct:demo_class_ops
+read_callback	hello.h	/^	int (*read_callback)(struct device *, int data);$/;"	m	struct:demo_class_ops
+release	hello.h	/^	void (*release)(struct device *);$/;"	m	struct:demo_class_ops
+set_data	hello.h	/^	int (*set_data)(struct device *, struct demo_ctl_data *);$/;"	m	struct:demo_class_ops
+sysfs_demo2_attr_group	hello_sysfs.c	/^const struct attribute_group sysfs_demo2_attr_group = {$/;"	v	typeref:struct:attribute_group
+sysfs_demo2_attributes	hello_sysfs.c	/^struct attribute *sysfs_demo2_attributes[] = {$/;"	v	typeref:struct:attribute
+sysfs_demo_attr_group	hello_sysfs.c	/^static const struct attribute_group sysfs_demo_attr_group = {$/;"	v	typeref:struct:attribute_group	file:
+sysfs_demo_attributes	hello_sysfs.c	/^struct attribute *sysfs_demo_attributes[] = { &node_one_attribute.attr,$/;"	v	typeref:struct:attribute
+sysfs_demo_exit	hello_sysfs.c	/^void __exit sysfs_demo_exit(void) {$/;"	f
+sysfs_demo_init	hello_sysfs.c	/^int __init sysfs_demo_init(struct class *cla) {$/;"	f
+sysfs_demo_show_node_four	hello_sysfs.c	/^ssize_t sysfs_demo_show_node_four(struct kobject *kobj,$/;"	f
+sysfs_demo_show_node_one	hello_sysfs.c	/^ssize_t sysfs_demo_show_node_one(struct kobject *kobj,$/;"	f
+sysfs_demo_show_node_three	hello_sysfs.c	/^ssize_t sysfs_demo_show_node_three(struct kobject *kobj,$/;"	f
+sysfs_demo_show_node_two	hello_sysfs.c	/^ssize_t sysfs_demo_show_node_two(struct kobject *kobj,$/;"	f
+sysfs_demo_store_node_one	hello_sysfs.c	/^ssize_t sysfs_demo_store_node_one(struct kobject *kobj,$/;"	f
+sysfs_demo_store_node_three	hello_sysfs.c	/^ssize_t sysfs_demo_store_node_three(struct kobject *kobj,$/;"	f
+test_task	hello_core.c	/^static struct task_struct *test_task = NULL;$/;"	v	typeref:struct:task_struct	file:
+text_data	hello.h	/^	unsigned long text_data;$/;"	m	struct:demo_data
